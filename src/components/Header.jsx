@@ -1,8 +1,8 @@
 const Header = () => {
   return (
-    <header className="flex justify-center items-center cursor-pointer">
+    <header className="flex justify-center items-center">
       <div className="flex flex-col">
-        <div className=" w-[1360px] pt-10 pb-[23px] flex justify-center justify-between">
+        <div className="w-[1360px] pt-10 pb-[23px] flex justify-center justify-between">
           <img
             className="w-[98px]"
             src="https://image.hago.kr/dev/main/pc/pc_main_logo.svg"

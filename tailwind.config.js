@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      suit: ["SUIT-Regular"],
+      suit: ["SUIT"],
     },
   },
   plugins: [],

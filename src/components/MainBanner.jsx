@@ -5,59 +5,97 @@ import MainBannerCard from "./MainBannerCard";
 const MainBannerData = [
   {
     id: 1,
-    contentId: 2236,
-    ut: "20240524181741",
+    contentId: 2278,
+    ut: "20240527205053",
+    title: "레인부츠\nLIVE REPLAY",
+    description: "최대 43% 단독 할인 + 18% 쿠폰",
+  },
+  {
+    id: 2,
+    contentId: 2260,
+    ut: "20240524230820",
     title: "",
     description: "",
   },
   {
-    id: 2,
+    id: 3,
     contentId: 2261,
     ut: "20240524181741",
     title: "플리즈프로젝트\n쇼핑하고위크",
     description: "30% 쿠폰 & 단독특가\n상반기 최대 쇼핑 혜택",
   },
-  //   {
-  //     id: 3,
-  //     contentId: 2246,
-  //     ut: "20240524182054",
-  //     title: "틸아이다이",
-  //     description: "24SUMMER 2차 단독 10% 할인",
-  //   },
-  //   {
-  //     id: 4,
-  //     contentId: 2231,
-  //     ut: "20240524181741",
-  //     title: "던스트 라이브 다시보기",
-  //     description: "이어지는 라이브 혜택 신상품 ~10% 할인&최대 50% 단독 할인",
-  //   },
-  //   {
-  //     id: 5,
-  //     contentId: 2247,
-  //     ut: "20240524181741",
-  //     title: "에이치에프엠",
-  //     description: "24summer 1차 발매 22% 쿠폰 혜택",
-  //   },
-  //   {
-  //     id: 6,
-  //     contentId: 2248,
-  //     ut: "20240524181741",
-  //     title: "오스트카카",
-  //     description: "24SUMMER 오픈 최대 10% 단독 할인+사은품 증정 이벤트",
-  //   },
-  //   {
-  //     id: 7,
-  //     contentId: 2249,
-  //     ut: "20240524181741",
-  //     title: "BEST SUMMER PANTS",
-  //     description: "72H 한정 최대 70% 할인 + 22% 쿠폰",
-  //   },
+  {
+    id: 4,
+    contentId: 2262,
+    ut: "20240527172750",
+    title: "에이치에프엠\n쇼핑하고위크",
+    description: "30% 쿠폰 & 단독특가\n상반기 최대 쇼핑 혜택",
+  },
+  {
+    id: 5,
+    contentId: 2263,
+    ut: "20240527172750",
+    title: "시야쥬\n쇼핑하고위크",
+    description: "30% 쿠폰 & 단독특가\n상반기 최대 쇼핑 혜택",
+  },
+  {
+    id: 6,
+    contentId: 2264,
+    ut: "20240527172750",
+    title: "보카바카\n쇼핑하고위크",
+    description: "30% 쿠폰 & 단독특가\n상반기 최대 쇼핑 혜택",
+  },
+  {
+    id: 7,
+    contentId: 2266,
+    ut: "20240527172750",
+    title: "린넨의 모든 것",
+    description: "최대 67% 할인",
+  },
+  {
+    id: 8,
+    contentId: 2268,
+    ut: "20240527172750",
+    title: "마리떼\n쇼핑하고위크",
+    description: "최대 20% 단독 할인 + 30% 쿠폰",
+  },
+  {
+    id: 9,
+    contentId: 2269,
+    ut: "20240527172750",
+    title: "버뮬라\n쇼핑하고위크",
+    description: "최대 30% 단독 할인 + 30% 쿠폰",
+  },
+  {
+    id: 10,
+    contentId: 2270,
+    ut: "20240527172750",
+    title: "비뮤즈맨션",
+    description: "72시간 깜짝 특가\n최대 70% 단독 할인",
+  },
+  {
+    id: 11,
+    contentId: 2271,
+    ut: "20240527172750",
+    title: "루시르주",
+    description: "24HS 발매/n10% 단독 할인",
+  },
 ];
 
 const MainBanner = () => {
   const [page, setPage] = useState(0);
 
   const sliderRef = useRef();
+
+  const onClickNext = () => {
+    sliderRef.current.slickNext();
+    getCurrentPage();
+  };
+
+  const onClickPrev = () => {
+    sliderRef.current.slickPrev();
+    getCurrentPage();
+  };
 
   const getCurrentPage = () => {
     setPage(sliderRef.current.innerSlider.state.currentSlide);
@@ -76,14 +114,16 @@ const MainBanner = () => {
       <Slider
         ref={sliderRef}
         fade={true}
+        dots={true}
+        infinite={true}
         autoplay={true}
         autoplaySpeed={5000}
         arrows={false}
+        // appendDots={<div className="h-[2px] px-0"></div>}
       >
         {MainBannerData.map((v) => (
           <MainBannerCard
             key={v.id}
-            imgUrl={v.imgUrl}
             contentId={v.contentId}
             ut={v.ut}
             title={v.title}
@@ -91,18 +131,32 @@ const MainBanner = () => {
           />
         ))}
       </Slider>
+      <div className="absolute top-1/2 px-10 w-full flex justify-between">
+        <button onClick={onClickPrev}>
+          <img
+            className="h-16"
+            src="https://image.hago.kr/dev/main/pc/main_left.svg"
+          />
+        </button>
+        <button onClick={onClickNext}>
+          <img
+            className="h-16"
+            src="https://image.hago.kr/dev/main/pc/main_right.svg"
+          />
+        </button>
+      </div>
       <div className="absolute flex pt-[10px] left-1/2 -translate-x-1/2">
         <div className="text-xs flex">
           <div className="pr-4">{page + 1}</div>
-          <div>
-            <ol className="h-[2px]">
+          <div className="w-[270px]">
+            {/* <ol className="h-[2px] w-full">
               <li></li>
               <li></li>
               <li></li>
               <li></li>
               <li></li>
               <li></li>
-            </ol>
+            </ol> */}
           </div>
           <div className="pl-4">{MainBannerData.length}</div>
         </div>
