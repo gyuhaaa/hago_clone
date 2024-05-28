@@ -5,6 +5,7 @@ const PostItCard = ({ id, brand, product, price, percent, soldout }) => {
     <div className="w-[195px] mr-4">
       <div className="relative">
         <img
+          className="w-[195px] object-cover"
           src={`/images/${brand.toLowerCase()}_${id}.jpg`}
           alt={`${brand.toLowerCase()}_${id}`}
         />

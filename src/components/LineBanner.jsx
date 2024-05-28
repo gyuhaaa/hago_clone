@@ -12,8 +12,8 @@ const LineBanner = () => {
           speed={5000}
           arrows={false}
           dots={false}
-          slidesToShow={2}
-          slidesToScroll={2}
+          slidesToShow={1}
+          slidesToScroll={1}
         >
           <div className="relative">
             <img

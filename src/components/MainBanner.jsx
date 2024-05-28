@@ -148,16 +148,7 @@ const MainBanner = () => {
       <div className="absolute flex pt-[10px] left-1/2 -translate-x-1/2">
         <div className="text-xs flex">
           <div className="pr-4">{page + 1}</div>
-          <div className="w-[270px]">
-            {/* <ol className="h-[2px] w-full">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ol> */}
-          </div>
+          <div className="w-[330px]"></div>
           <div className="pl-4">{MainBannerData.length}</div>
         </div>
       </div>

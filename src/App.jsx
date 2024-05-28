@@ -21,7 +21,7 @@ const App = () => {
       <Spotlight />
       <LineBanner />
       <HagoLive />
-      <JustChoice />
+      {/* <JustChoice /> */}
       <SelectHago />
       <DeepFocus />
       <MyHago />

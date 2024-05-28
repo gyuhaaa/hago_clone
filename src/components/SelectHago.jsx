@@ -1,3 +1,5 @@
+import Slider from "react-slick";
+
 const SelectHago = () => {
   return (
     <div className="content">

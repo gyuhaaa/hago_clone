@@ -93,7 +93,7 @@ const HagoLive = () => {
               </p>
             </div>
           </div>
-          <div className="pl-5">
+          {/* <div className="pl-5">
             <p className="text-base pb-[10px] font-medium">06.04 TUE</p>
             <img
               className="w-[203px] h-[276px]"
@@ -106,7 +106,7 @@ const HagoLive = () => {
                 오후 7:00시 방송 예정
               </p>
             </div>
-          </div>
+          </div> */}
           {/* </Slider> */}
         </div>
       </div>

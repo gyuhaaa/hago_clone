@@ -41,38 +41,38 @@ const PostItData = [
     percent: 5,
     soldout: false,
   },
-  {
-    id: 6,
-    brand: "DUNST",
-    product: "A-LINE MINI SKIRT WHITE_UDSK4B227WT",
-    price: 94050,
-    percent: 5,
-    soldout: false,
-  },
-  {
-    id: 7,
-    brand: "DUNST",
-    product: "UNISEX CUPID CAMPUS T-SHIRT BLACK_UDTS4B121BK",
-    price: 44100,
-    percent: 10,
-    soldout: false,
-  },
-  {
-    id: 8,
-    brand: "DUNST",
-    product: "CLASSIC HALF SLEEVE SHIRT BLUE STRIPE_UDSH4B225B2",
-    price: 94050,
-    percent: 5,
-    soldout: false,
-  },
-  {
-    id: 9,
-    brand: "DUNST",
-    product: "[6/3 예약배송] SUMMER SOFT CHINO SLACKS WHITE_UDPA4B222WT",
-    price: 103550,
-    percent: 5,
-    soldout: false,
-  },
+  // {
+  //   id: 6,
+  //   brand: "DUNST",
+  //   product: "A-LINE MINI SKIRT WHITE_UDSK4B227WT",
+  //   price: 94050,
+  //   percent: 5,
+  //   soldout: false,
+  // },
+  // {
+  //   id: 7,
+  //   brand: "DUNST",
+  //   product: "UNISEX CUPID CAMPUS T-SHIRT BLACK_UDTS4B121BK",
+  //   price: 44100,
+  //   percent: 10,
+  //   soldout: false,
+  // },
+  // {
+  //   id: 8,
+  //   brand: "DUNST",
+  //   product: "CLASSIC HALF SLEEVE SHIRT BLUE STRIPE_UDSH4B225B2",
+  //   price: 94050,
+  //   percent: 5,
+  //   soldout: false,
+  // },
+  // {
+  //   id: 9,
+  //   brand: "DUNST",
+  //   product: "[6/3 예약배송] SUMMER SOFT CHINO SLACKS WHITE_UDPA4B222WT",
+  //   price: 103550,
+  //   percent: 5,
+  //   soldout: false,
+  // },
 ];
 
 const PostIt = () => {
@@ -99,7 +99,7 @@ const PostIt = () => {
             #마뗑킴
           </button>
         </div>
-        <div className="w-[1090px] pl-[50px] flex overflow-x-scroll touch-manipulation">
+        <div className="w-[1040px] pl-[50px] flex overflow-auto touch-manipulation">
           {PostItData.map((v) => (
             <PostItCard
               key={v.id}
